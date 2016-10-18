@@ -14,57 +14,20 @@
  */
 class TwitterAPIExchange
 {
-    /**
-     * @var string
-     */
-    private $oauth_access_token;
-
-    /**
-     * @var string
-     */
-    private $oauth_access_token_secret;
-
-    /**
-     * @var string
-     */
-    private $consumer_key;
-
-    /**
-     * @var string
-     */
-    private $consumer_secret;
-
-    /**
-     * @var array
-     */
-    private $postfields;
-
-    /**
-     * @var string
-     */
-    private $getfield;
-
-    /**
-     * @var mixed
-     */
-    protected $oauth;
-
-    /**
-     * @var string
-     */
-    public $url;
-
-    /**
-     * @var string
-     */
-    public $requestMethod;
-
-    /**
-     * The HTTP status code from the previous request
-     *
-     * @var int
-     */
-    protected $httpStatusCode;
+    
+    private $oauth_access_token;        //access token, @var string
+    private $oauth_access_token_secret; //access token secret, @var string
+    private $consumer_key;              //consumer key, @var string
+    private $consumer_secret;           //consumer secret, @var string
+    private $postfields;                //post fields, @var array
+    private $getfield;                  //get field, @var string
+    
+    protected $oauth;                   //oauth, @var mixed
+    protected $httpStatusCode;          //The HTTP status code from the previous request, @var int
+    
+    public $url;                        //url, @var string
+    public $requestMethod;              //request, @var string
+    
 
     /**
      * Create the API access object. Requires an array of settings::
